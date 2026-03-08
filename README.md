@@ -13,9 +13,17 @@
 3. Paste and say: **`consult`**
 
 ### For Claude
+**Option A — Structured Consultant:**
 1. Open [Claude](https://claude.ai)
 2. Copy [prompts/claude.md](prompts/claude.md)
 3. Paste and say: **`consult`**
+
+**Option B — Coworker Mode:**
+1. Open [Claude](https://claude.ai)
+2. Copy [prompts/claude-coworker.md](prompts/claude-coworker.md)
+3. Paste and say: **`let's work`**
+
+(See [Two Claude Styles](#-two-claude-styles-choose-your-fit) below to choose)
 
 ### For Gemini
 1. Open [Gemini](https://gemini.google.com)
@@ -126,10 +134,60 @@ Available for:
 |---------|----------|------|
 | **chatgpt.md** | ChatGPT 4o, o1, o3 | ~300 lines |
 | **claude.md** | Claude 3.5 Sonnet, Opus | ~280 lines |
+| **claude-coworker.md** | Claude (conversational style) | ~140 lines |
 | **gemini.md** | Gemini 1.5 Pro, Ultra | ~290 lines |
 | **kimi.md** | Kimi k1.5, Moonshot | ~270 lines |
 
 Each optimized for the AI's specific strengths and context window.
+
+---
+
+## 🤝 Two Claude Styles: Choose Your Fit
+
+We offer two different approaches for Claude — pick what matches your working style:
+
+### Option A: Structured Consultant (`claude.md`)
+**Best for:** Complex projects, team collaboration, thorough documentation
+
+- **Style:** Professional consultant with clear phases
+- **Format:** 6-bullet status updates, progress tracking
+- **Process:** Explore → Discover → Design → Agreement → Build → Verify → Deliver
+- **Gates:** Explicit approval at each phase
+- **Preview:** Optional HTML preview panel for visual projects
+- **Tone:** Thorough, organized, "let's do this right"
+
+**Try this if:** You want structure, clarity on progress, and professional documentation.
+
+---
+
+### Option B: Coworker Mode (`claude-coworker.md`) 
+**Best for:** Quick tasks, rapid iteration, conversational workflow
+
+- **Style:** Desk-mate who gets it done without ceremony
+- **Format:** Natural conversation, no bullet points or phases
+- **Process:** One-sentence confirmation → Build → Brief delivery note
+- **Gates:** Implicit ("One-page HTML with sliders — good to go?")
+- **Preview:** Embedded in conversation
+- **Tone:** Direct, dry, "I've got this"
+
+**Key principles:**
+- Test your own work before handing it over
+- Fix bugs silently, don't narrate them
+- One sentence on what's interesting, one question on what's next
+- No "Great question!" or performed enthusiasm
+
+**Try this if:** You hate bureaucracy, want fast iterations, and prefer casual collaboration.
+
+|  | Consultant (`claude.md`) | Coworker (`claude-coworker.md`) |
+|--|--------------------------|--------------------------------|
+| **Vibe** | Professional | Casual |
+| **Structure** | Phases + gates | Flow + checkpoints |
+| **Updates** | 6-bullet status | Natural sentences |
+| **Confirmation** | Explicit approval | One-line nod |
+| **Documentation** | Full project files | Minimal |
+| **Best for** | Complex/multi stakeholder | Quick/exploratory tasks |
+
+**Can't decide?** Start with Coworker for quick tasks. Switch to Consultant when you need thoroughness.
 
 ---
 
