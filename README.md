@@ -1,77 +1,124 @@
-# 🎩 Universal Consultant
+# 🎩 Universal Consultant v6.0
 
-> **AI-powered consulting that feels human, delivers superhuman thoroughness.**  
-> Choose your AI below. Copy. Paste. Experience the upgrade.
+> **AI-powered consulting with Maker/Validator/Aligner trio.**  
+> Quality through role tension. Terse for AI, clear for humans.
 
 ---
 
 ## ⚡ Quick Start (30 seconds)
 
+Choose your AI:
+
 ### For ChatGPT
-1. Open [ChatGPT](https://chat.openai.com)
-2. Copy [prompts/chatgpt.md](prompts/chatgpt.md)
-3. Paste and say: **`consult`**
+1. Copy [prompts/chatgpt.md](prompts/chatgpt.md) below the `---`
+2. Paste into ChatGPT
+3. Say: **`consult`**
 
 ### For Claude
-**Option A — Structured Consultant:**
-1. Open [Claude](https://claude.ai)
-2. Copy [prompts/claude.md](prompts/claude.md)
-3. Paste and say: **`consult`**
-
-**Option B — Coworker Mode:**
-1. Open [Claude](https://claude.ai)
-2. Copy [prompts/claude-coworker.md](prompts/claude-coworker.md)
-3. Paste and say: **`let's work`**
-
-(See [Two Claude Styles](#-two-claude-styles-choose-your-fit) below to choose)
+1. Copy [prompts/claude.md](prompts/claude.md) below the `---`
+2. Paste into Claude
+3. Say: **`consult`**
 
 ### For Gemini
-1. Open [Gemini](https://gemini.google.com)
-2. Copy [prompts/gemini.md](prompts/gemini.md)
-3. Paste and say: **`consult`**
+1. Copy [prompts/gemini.md](prompts/gemini.md) below the `---`
+2. Paste into Gemini
+3. Say: **`consult`**
 
 ### For Kimi
-1. Use [Kimi CLI](https://github.com/MoonshotAI/kimi-cli) with the [consulting-core skill](../consulting-core)
-2. Or copy [prompts/kimi.md](prompts/kimi.md) into [Kimi Web](https://kimi.moonshot.cn)
+1. Copy [prompts/kimi.md](prompts/kimi.md) below the `---`
+2. Paste into Kimi Web
 3. Say: **`consult`**
 
 ---
 
-## What's New (The Upgrade)
+## What's New in v6.0
 
-| Old Way | New Way |
-|---------|---------|
-| 10 bullets, 7 phases | **6 bullets, 5 phases** + exploration |
-| 4 phases before code | **Prototype in Phase 1** |
-| Text only | **Optional HTML preview panel** |
-| [A/B/C/D] syntax | **Conversational choices** |
-| Orchestrator/PM/Subagents | **Single "I" — your consultant** |
-| "YOLO mode" | **"Fast-Track mode"** |
+| Before (v4.0) | After (v6.0) |
+|---------------|--------------|
+| AI is the expert | **AI is Contact, Trio delivers** |
+| 10 bullets | **6 bullets** |
+| 7 phases | **5 phases + Design/Validation gates** |
+| Single AI monolith | **Maker/Validator/Aligner sub-agents** |
+| God prompts | **Lazy-loaded sub-skills** |
+| YOLO mode | **fast-track with constraints** |
+| Lost in context | **Context Stack (5 layers)** |
 
 ---
 
-## The Hybrid Workflow
+## The 6-Bullet Format
+
+Every response follows this structure:
 
 ```
-ENTRY POINTS:
-┌─────────────┐  ┌─────────────┐  ┌─────────────┐
-│  🚀 Explore │  │  🔍 Consult │  │  ⚡ Fast    │
-│  (Agile)    │  │  (Standard) │  │  (Express)  │
-└──────┬──────┘  └──────┬──────┘  └──────┬──────┘
-       │                │                │
-       └────────────────┴────────────────┘
-                          │
-       ┌──────────────────┼──────────────────┐
-       │                  │                  │
-       ▼                  ▼                  ▼
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│  Quick      │    │  Full       │    │  Assumptions│
-│  prototype  │ →  │  waterfall  │    │  + build    │
-│  or spike   │    │  execution  │    │             │
-└─────────────┘    └─────────────┘    └─────────────┘
-       │
-       └──── "Yes! Build this for real" ────→ Full process
+• [Status] 🔍 Discovery — Maker:standby|Validator:standby|Aligner:active
+• [Learned] You process 100+ files weekly, manual today
+• [Risk] Scale may require database vs spreadsheet
+• [Progress] ●●●●○ (4/5 questions)
+• [→] What's your timeline for delivery?
+• [○] Switch to fast-track mode
 ```
+
+**Clean. Focused. Scannable.**
+
+---
+
+## The Workflow
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    6-PHASE WORKFLOW                         │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  ENTRY: consult | explore | fast-track                      │
+│                    │                                        │
+│                    ▼                                        │
+│  ┌─────────────┐   ┌─────────────┐   ┌─────────────┐       │
+│  │ 1.DISCOVERY │ → │ 2.DESIGN    │ → │ 3.BUILD     │       │
+│  │  Aligner    │   │   REVIEW    │   │ Maker+Valid │       │
+│  │  interviews │   │ [A][R][C]   │   │  parallel   │       │
+│  └─────────────┘   └─────────────┘   └──────┬──────┘       │
+│                                             │               │
+│                    ┌────────────────────────┘               │
+│                    ▼                                        │
+│  ┌─────────────┐   ┌─────────────┐   ┌─────────────┐       │
+│  │ 6.DELIVER   │ ← │ 5.FINAL QA  │ ← │ 4.VALIDATE  │       │
+│  │ Git commit  │   │  Pre-flight │   │   REVIEW    │       │
+│  │ + archive   │   │   checklist │   │  [P][F]     │       │
+│  └─────────────┘   └─────────────┘   └─────────────┘       │
+│                                                             │
+│  GATES: [A]pprove/[R]evise/[C]ancel at Design               │
+│         [P]ass/[F]ix at Validation                          │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## The Trio
+
+You talk to the **Contact** (AI). Behind the scenes:
+
+| Role | Job | Mindset |
+|------|-----|---------|
+| **Maker** | Creates deliverable | "I build it" |
+| **Validator** | Verifies it works | "I find what's broken" |
+| **Aligner** | Ensures right problem | "I solve the real need" |
+
+**Quality comes from tension between roles**, not one AI doing everything.
+
+---
+
+## Context Stack (Beat Attention Bias)
+
+```
+Layer 1: Repository Overview     ← Architectural context
+Layer 2: Semantic Search         ← Relevant file discovery
+Layer 3: File System Commands    ← Targeted inspection
+Layer 4: Enterprise Context      ← Organizational knowledge
+Layer 5: Hierarchical Memory     ← Persistent learning
+```
+
+Progressively distills millions of tokens to ~4K of what agent needs now.
 
 ---
 
@@ -79,177 +126,95 @@ ENTRY POINTS:
 
 | Command | What It Does |
 |---------|--------------|
-| `consult` | Start standard consulting workflow |
-| `explore` | Start with quick prototype/spike |
-| `fast-track` | Skip ahead with smart defaults |
+| `consult` | Start standard 6-phase workflow |
+| `explore` | 10-min prototype first (best if unsure) |
+| `fast-track` | Express mode (3 questions, spot QA) |
 | `show preview` | Display HTML preview panel |
-| `status` | See current phase and progress |
+| `show guide` | Show user guide again |
+| `status` | Current phase and progress |
 | `pause` | Save state, resume later |
 | `exit` | Return to normal chat |
 
 ---
 
-## The 6-Bullet Format
+## HTML User Guide
 
-Every response follows this clean structure:
+On first activation, the AI generates a **pretty HTML user guide**:
 
+```html
+🎩 Universal Consultant v6.0
+┌─────────────────────────────────────┐
+│ Quick Start: consult|explore|fast   │
+├─────────────────────────────────────┤
+│ The 6-Bullet Format                 │
+│ • [Status] • [Learned] • [Risk]     │
+│ • [Progress] • [→] • [○]            │
+├─────────────────────────────────────┤
+│ The Trio: Maker|Validator|Aligner   │
+├─────────────────────────────────────┤
+│ Workflow: 6 phases with gates       │
+└─────────────────────────────────────┘
 ```
-• [Status] 🔍 Discovery — Understanding your automation needs
-• [Learned] You process 100+ files weekly, currently manual
-• [Risk] Scale may require database vs spreadsheet  
-• [Progress] ●●●●○ (4/5)
-• [→] What's your timeline for this project?
-• [○] Skip to Fast-Track mode
-```
 
-**Clean. Focused. Human.**
+**Each AI edition (ChatGPT/Claude/Gemini/Kimi) has styled HTML matching its aesthetic.**
 
 ---
 
-## Preview Panel (Optional Luxury)
+## Safety
 
-For visual projects, you'll see an elegant HTML preview:
+**NEVER:**
+- Delete files outside working directory
+- Push to main/master
+- Skip validation gates
+- Claim delivery without evidence
 
-```
-[Preview Panel: 🎨 Design Mockup]
-┌─────────────────────────────────────┐
-│ Concept A  │  Concept B  │  Concept C│
-│   [Img]    │   [Img]     │   [Img]   │
-│ Minimal    │  Vintage    │  Modern   │
-└─────────────────────────────────────┘
-[Download] [Iterate] [Approve]
-```
-
-Available for:
-- 🎨 Design mockups
-- 🔧 Code output  
-- 📊 Data visualizations
-- 📝 Rich documents
+**ALWAYS:**
+- Get explicit approval at gates
+- Provide evidence for verification claims
+- Human review before delivery
+- Git commit with full context
 
 ---
 
 ## Prompt Variants
 
-| Variant | Best For | Size |
-|---------|----------|------|
-| **chatgpt.md** | ChatGPT 4o, o1, o3 | ~300 lines |
-| **claude.md** | Claude 3.5 Sonnet, Opus | ~280 lines |
-| **claude-coworker.md** | Claude (conversational style) | ~140 lines |
-| **gemini.md** | Gemini 1.5 Pro, Ultra | ~290 lines |
-| **kimi.md** | Kimi k1.5, Moonshot | ~270 lines |
+| Variant | For | Lines | Key Feature |
+|---------|-----|-------|-------------|
+| `chatgpt.md` | ChatGPT 4o, o1, o3 | ~150 | Clean markdown style |
+| `claude.md` | Claude 3.5 Sonnet, Opus | ~200 | Extended reasoning |
+| `gemini.md` | Gemini 1.5 Pro, Ultra | ~140 | Material Design aesthetic |
+| `kimi.md` | Kimi k1.5, CLI | ~180 | Dark mode, tools enabled |
 
 Each optimized for the AI's specific strengths and context window.
 
 ---
 
-## 🤝 Two Claude Styles: Choose Your Fit
+## The Terse Format Explained
 
-We offer two different approaches for Claude — pick what matches your working style:
+The prompts use **terse, AI-understandable language** with `# human:` comments:
 
-### Option A: Structured Consultant (`claude.md`)
-**Best for:** Complex projects, team collaboration, thorough documentation
+```markdown
+## IDENTITY # terse: AI consultant, not expert
+You are the Contact. Trio delivers...
 
-- **Style:** Professional consultant with clear phases
-- **Format:** 6-bullet status updates, progress tracking
-- **Process:** Explore → Discover → Design → Agreement → Build → Verify → Deliver
-- **Gates:** Explicit approval at each phase
-- **Preview:** Optional HTML preview panel for visual projects
-- **Tone:** Thorough, organized, "let's do this right"
-
-**Try this if:** You want structure, clarity on progress, and professional documentation.
-
----
-
-### Option B: Coworker Mode (`claude-coworker.md`) 
-**Best for:** Quick tasks, rapid iteration, conversational workflow
-
-- **Style:** Desk-mate who gets it done without ceremony
-- **Format:** Natural conversation, no bullet points or phases
-- **Process:** One-sentence confirmation → Build → Brief delivery note
-- **Gates:** Implicit ("One-page HTML with sliders — good to go?")
-- **Preview:** Embedded in conversation
-- **Tone:** Direct, dry, "I've got this"
-
-**Key principles:**
-- Test your own work before handing it over
-- Fix bugs silently, don't narrate them
-- One sentence on what's interesting, one question on what's next
-- No "Great question!" or performed enthusiasm
-
-**Try this if:** You hate bureaucracy, want fast iterations, and prefer casual collaboration.
-
-|  | Consultant (`claude.md`) | Coworker (`claude-coworker.md`) |
-|--|--------------------------|--------------------------------|
-| **Vibe** | Professional | Casual |
-| **Structure** | Phases + gates | Flow + checkpoints |
-| **Updates** | 6-bullet status | Natural sentences |
-| **Confirmation** | Explicit approval | One-line nod |
-| **Documentation** | Full project files | Minimal |
-| **Best for** | Complex/multi stakeholder | Quick/exploratory tasks |
-
-**Can't decide?** Start with Coworker for quick tasks. Switch to Consultant when you need thoroughness.
-
----
-
-## Why This Works
-
-### 1. **Human Speed**
-- Start with a prototype in minutes, not hours
-- 6 bullets, not 10 — less cognitive load
-- Conversational, not bureaucratic
-
-### 2. **Superhuman Thoroughness**  
-- Phase gates ensure nothing proceeds without your OK
-- Verification before delivery
-- Evidence, not assumptions
-
-### 3. **Flexible Entry**
-- Explore → Prototype → Decide
-- Or fast-track if you know what you want
-- Or full process for complex projects
-
----
-
-## Examples
-
-### Scenario: Photo Renamer Script
-
-**Old way:** 8 questions → 3 phases → code at phase 5  
-**New way:**
-
-```
-You: consult
-AI:  • 🔍 Discovery — Understanding your file automation needs
-    • Learned: You rename vacation photos by date taken
-    • Risk: Different cameras use different date formats
-    • Progress: ●○ (1/2)
-    • [→] What photo formats? (JPG, RAW, etc.)
-    • [○] Fast-track — I'll assume JPG/PNG
-
-You: Fast-track
-AI:  [Preview Panel: 🔧 Code Preview]
-    ┌─────────────────────────────────┐
-    │ Python script • 42 lines        │
-    │ • Reads EXIF dates              │
-    │ • Renames: YYYY-MM-DD_photo.jpg │
-    │ • Handles duplicates            │
-    └─────────────────────────────────┘
-    [Copy] [Run] [Edit]
-    
-    Here's your script. Try it — want me to refine anything?
+## ACTIVATION # terse: entry points
+consult → full workflow | explore → prototype...
 ```
 
-**Time to working code: 2 minutes, not 20.**
+**Why terse?**
+- AI processes efficiently
+- Less token overhead
+- Human comments explain intent
 
 ---
 
-## Contributing
+## Based On
 
-These prompts are generated from [consulting-core](../consulting-core).  
-To suggest improvements, open an issue with:
-- Which AI you used
-- What felt fast/slow
-- Where you got confused
+Built from [consultancy-skill v6.0](https://github.com/masplett/consultancy-skill):
+- 163 enhancements (E001-E163)
+- 9 change requests (CR001-CR009)
+- 14 sub-skills
+- Lazy loading architecture
 
 ---
 
@@ -260,6 +225,6 @@ MIT — Use anywhere, build anything.
 ---
 
 <p align="center">
-  <b>Consulting that feels human. Results that feel like magic.</b><br>
+  <b>🎩 Consulting that feels human. Results that feel like magic.</b><br>
   <code>consult</code> → <code>explore</code> → <code>fast-track</code>
 </p>
